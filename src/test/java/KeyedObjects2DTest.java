@@ -4,6 +4,8 @@ import org.jfree.data.UnknownKeyException;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.*;
@@ -168,7 +170,16 @@ public class KeyedObjects2DTest {
     }
 
     @Test
-    public void testGetRowKeyIntIntegrationHappy() {
+    public void testGetRowKeyFalseIndex() {
+        //arrange
+        KeyedObjects2D keyedObjects2D = new KeyedObjects2D();
+        //act
+        Comparable rowKey = keyedObjects2D.getRowKey(0);
+        //assert
+    }
+    
+    @Test
+    public void testGetRowKeyIntegrationHappy() {
         //arrange
         KeyedObjects2D keyedObjects2D = new KeyedObjects2D();
         Object objA = null;
